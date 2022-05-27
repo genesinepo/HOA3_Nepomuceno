@@ -1,0 +1,10 @@
+---
+- hosts: 192.168.0.39
+  become: true
+  roles:
+    - vsftpd
+    - dhcpd
+    - mariadb
+    - bind9
+    - samba
+    - httpd
