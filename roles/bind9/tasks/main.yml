@@ -1,0 +1,15 @@
+- name: Install bind9 (Ubuntu)
+  apt:
+   name:
+     - bind9
+   state: latest
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install bind9 (CentOS)
+  yum:
+   name:
+     - bind
+     - bind-utils
+   state: latest
+  when: ansible_distribution == "CentOS"
+
